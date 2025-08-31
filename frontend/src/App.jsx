@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useDropzone } from 'react-dropzone';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Upload, FileText, Sparkles, Brain, Target, TrendingUp, Copy, Check, MousePointerSquare } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
+import { Upload, FileText, Sparkles, Brain, TrendingUp, Copy, Check } from 'lucide-react';
 
 function App() {
   const [extractedText, setExtractedText] = useState('');
@@ -14,7 +14,7 @@ function App() {
   const handleCopy = (textToCopy, type) => {
     navigator.clipboard.writeText(textToCopy);
     setCopied(type);
-    setTimeout(() => setCopied(''), 2000);
+    setTimeout(() => setCopied(''), 2000); // Reset after 2 seconds
   };
 
   const onDrop = async (acceptedFiles) => {
@@ -30,7 +30,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/upload', formData, {
+      const response = await axios.post('https://social-media-analyzer-82kf.onrender.com/api/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setExtractedText(response.data.text);
@@ -72,7 +72,7 @@ function App() {
             <p className="mt-4 text-lg text-white font-semibold">Drag & drop your file, or click to select</p>
             <p className="text-purple-200 text-sm mt-1">PDF or Image files supported</p>
           </motion.div>
-
+          
           <AnimatePresence>
             {isLoading && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="text-center mt-6">
@@ -145,7 +145,7 @@ function App() {
                  <h3 className="text-2xl font-bold text-white mb-4">Ready to Elevate Your Content?</h3>
                  <p className="text-purple-200 mb-6">Start by uploading your file above and let our AI do the heavy lifting.</p>
                  <button className="bg-white text-purple-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-100 transition-all duration-300">
-                   <MousePointerSquare className="inline-block mr-2" />
+                   <Upload className="inline-block mr-2" />
                    Get Started Now
                  </button>
               </motion.div>
@@ -153,7 +153,7 @@ function App() {
           )}
         </motion.div>
       </main>
-
+      
       <motion.footer 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
