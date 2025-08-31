@@ -160,7 +160,7 @@ function App() {
         transition={{ duration: 0.5, delay: 1 }}
         className="text-center p-4 text-purple-200/80 text-sm"
       >
-        <p>Built with ❤️ by [Your Name] for the Technical Assessment.</p>
+        <p>Built by Sumit Mishra.</p>
       </motion.footer>
     </div>
   );
