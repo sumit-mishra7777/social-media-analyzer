@@ -58,7 +58,7 @@ function App() {
           className="bg-white/20 backdrop-blur-xl rounded-2xl shadow-2xl p-8 w-full max-w-5xl border border-white/30"
         >
           <header className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Social Content Analyzer</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Social Media Content Analyzer</h1>
             <p className="text-purple-200 mt-3 text-lg">Unleash your content's potential with AI-powered suggestions.</p>
           </header>
 
