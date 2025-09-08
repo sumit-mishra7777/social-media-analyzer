@@ -64,4 +64,4 @@ This is a full-stack web application designed to analyze social media content fr
     ```bash
     npm run dev
     ```
-The application will be available at `http://localhost:5173`.
+The application will be available at `https://social-media-analyzer-peqt.vercel.app/`.
