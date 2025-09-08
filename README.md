@@ -2,7 +2,7 @@
 
 This is a full-stack web application designed to analyze social media content from uploaded PDF or image files. It extracts the text and uses an AI model to provide actionable suggestions for improving engagement.
 
-**Live Demo URL:** (Will be added after deployment)
+Live Demo URL: https://social-media-analyzer-peqt.vercel.app/
 
 ---
 
